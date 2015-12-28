@@ -1,0 +1,13 @@
+---
+:backends:
+  - yaml
+:yaml:
+  :datadir: "/opt/puppet-files/hiera/%{::environment}/"
+:merge_behavior: deeper
+:hierarchy:
+  - "by-hostname/%{::hostname}"
+  - "by-virtual/%{::virtual}"
+  - "by-operatingsystem/%{::osfamily}/%{::lsbdistcodename}"
+  - "by-operatingsystem/%{::osfamily}"
+  - common
+:logger: console
