@@ -8,14 +8,14 @@ Docker image for puppetmaster
 
 ## Run
 
-   docker run -d -h puppet -p 8140:8140 --name puppetmaster skylost/puppetmaster 
+    docker run -d -h puppet -p 8140:8140 --name puppetmaster skylost/puppetmaster 
 
 ## Usage
 
 ### To see list of certs
 
-   docker exec puppetmaster puppet cert list --all
+    docker exec puppetmaster puppet cert list --all
 
 ### To remove node
 
-   docker exec puppetmaster puppet cert clean <hostname>
+    docker exec puppetmaster puppet cert clean <hostname>
